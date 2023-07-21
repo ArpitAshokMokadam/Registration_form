@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            width: 60%;
+            background-color: antiquewhite;
+        }
+        .row {
+            padding: 13px;
+        }
+        .left {
+           float: left;
+           width: 15%;
+        }
+
+    </style>
+</head>
+<body>
+    <form action="#">
+       <div class="container">
+        <div class="row">
+            <label for="Name" class="left">Fname</label>
+            <input type="text" id="Name" onkeyup="chkname()">
+            <span>(only characters)</span>
+            <div id="chkname"> </div>
+        </div>
+        <div class="row">
+            <label for="Email" class="left">Email</label>
+            <input type="text" id="Email" onkeyup="chkemail()" >
+            <span>(should be a valid email)</span>
+            <div id="chkemail"></div>
+        </div>
+        <div class="row">
+            <label for="Password" class="left">Password</label>
+            <input type="text" id="Password" onkeyup="chkpaswrd()">
+            <span>(must have 1 special char, 1 uppercase,1 lowercase,1 no.,minimum 8 chars)</span>
+            <div id="chkpswrd"></div>
+        </div>
+        <div class="row">
+            <label for="Mobnum" class="left">Mobile</label>
+            <input type="text" id="Mobnum" onkeyup="chkmobnum()" >
+            <span>(must be 10 digit indian mobile number)</span>
+            <div id="chkmobnum"></div>
+        </div>
+        <div class="row">
+            <label for="State" class="left">Select State</label>
+            <select name="" id="State"></select>
+        </div>
+        <div class="row">
+            <label for="City" class="left">Select City</label>
+            <select name="" id="City"></select>
+        </div>
+       </div>
+    </form>
+
+    <script>
+       function chkname() {
+        let fname = document.getElementById('Name').value;
+        let fnamepatt = /^[a-zA-Z]{3,}(?:-[a-zA-Z]+)?(?:-[a-zA-Z]+)?$/;
+        if (fnamepatt.test(fname)){
+            document.getElementById('chkname').innerHTML = "Name is valid";
+        } else {
+            document.getElementById('chkname').innerHTML = "Name is invalid";
+        }
+       }
+
+       function chkemail(){
+        let email = document.getElementById('Email').value;
+        let emailpatt = /[^\s]*@[a-z0-9.-]*/i;
+        if (emailpatt.test(email)){
+            document.getElementById('chkemail').innerHTML = "Email is valid";
+        } else {
+            document.getElementById('chkemail').innerHTML = "Email is invalid";
+        }
+       }
+
+       function chkpaswrd(){
+        let pswrd = document.getElementById('Password').value;
+        let pswrdpatt = /((?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[\W]).{8,20})/;
+        if (pswrdpatt.test(pswrd)){
+            document.getElementById('chkpswrd').innerHTML = "Password is valid";
+        } else {
+            document.getElementById('chkpswrd').innerHTML = "Password is invalid";
+        }
+       }
+       function chkmobnum() {
+        let Mobnum = document.getElementById('Mobnum').value;
+        let mobnumpatt = /^(\+91[\-\s]?)?[0]?(91)?[789]\d{9}$/;
+        if (mobnumpatt.test(Mobnum)) {
+            document.getElementById('chkmobnum').innerHTML = "Valid contact number";
+        } else {
+            document.getElementById('chkmobnum').innerHTML = "Invalid contact number";
+        }
+       }
+
+
+
+
+       let states = ["Select","Maharashtra","J & K","Gujrat","Karnataka","Tamil Nadu","Madhya Pradesh",
+    "Assam","Rajasthan","Punjab","Himachal Pradesh","Haryana","West Bengal","U.P","Kerala","Orissa","Andhra Pradesh",
+      "Chhatisgarh","Arunanchal Pradesh","Bihar"];
+
+    let statestr = "";
+    for(x of states){
+        statestr += "<option>" +x+ "</option>";
+    }
+    document.getElementById('State').innerHTML = statestr;
+
+
+
+
+
+    let cities = ["Select","Nagpur","Wardha","Mumbai","Pune","Chennai","Delhi","Surat","Hyedrabad","Mysore","Ooty",
+        "Aurangabad","Ahmedabad","Ranchi","Raipur","Itarsi","Varanasi","Kolkata","Bengaluru","Jaipur","Jaipur",
+        "Amritsar","Agra","Nashik","Kanpur","Kochi","Chandigarh","Vishakapatnam","Indore","Jabalpur","Gwalior",
+        "Jalandhar","Srinagar","Jhasi","Ghaziabad","Salem","Gurugram","Meerut","Rajkot"];
+
+        let citiesstr = "";
+    for(let y of cities){
+        citiesstr += "<option>" +y+ "</option>";
+    }
+    document.getElementById('City').innerHTML = citiesstr;
+    </script>
+</body>
+</html>
