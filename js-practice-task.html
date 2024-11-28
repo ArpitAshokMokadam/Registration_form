@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="num1">
+    <input type="text" id="num2">
+    <br><br>
+    <button onclick="func1()">largest number</button>
+    <button onclick="func2()">smallest number</button>
+    <p id="result"></p>
+    <script>
+        function func1() {
+            let x, y, z ;
+        x = parseInt(document.getElementById('num1').value);
+        y = parseInt(document.getElementById('num2').value);
+        z = (x > y ? x : y);
+        document.getElementById('result').innerHTML = "largest no. = " +z;
+        console.log(typeof(x));
+        }  
+
+        function func2() {
+            let x, y, z;
+            x = parseInt(document.getElementById('num1').value);
+            y = parseInt(document.getElementById('num2').value);
+            z = (x < y ? x : y);
+            document.getElementById('result').innerHTML = "smallest no. = " +z;
+        }
+    </script>
+</body>
+</html>

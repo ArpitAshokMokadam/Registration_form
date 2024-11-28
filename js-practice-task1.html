@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="num1">
+    <input type="text" id="num2">
+    <input type="text" id="num3">
+    <br><br>
+    <button onclick="func1()">find largest</button>
+    <button onclick="func2()">find smallest</button>
+    <p id="result"></p>
+
+    <script>
+        function func1() {
+            let x, y, z, a;
+            x = parseInt(document.getElementById('num1').value);
+            y = parseInt(document.getElementById('num2').value);
+            z = parseInt(document.getElementById('num3').value);
+            a = (x > y ? (x > z ? x : z):(y > z ? y : z));
+
+            document.getElementById('result').innerHTML = "largest no = " +a;
+        }
+
+        function func2() {
+            let x, y, z, a;
+            x = parseInt(document.getElementById('num1').value);
+            y = parseInt(document.getElementById('num2').value);
+            z = parseInt(document.getElementById('num3').value);
+            a = (x < y ? (x < z ? x : z):(y < z ? y : z));
+
+            document.getElementById('result').innerHTML = "smallest no = " +a;
+        }
+    </script>
+</body>
+</html>

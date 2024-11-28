@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="mydt"></ul>
+    <!-- <p>js objects</p>
+    <script>
+        var person = {
+            "fname" : "John",
+            "lname" : "Doe",
+            "age" : 21,
+            "fullname" : function(){
+                console.log(this.fname + " " + this.lname); //console.log("function called")
+            }
+        }
+        console.log(person.fname);// or can also be written as console.log(person["fname"]);
+        person.fullname();
+    </script>
+
+    <p>object array</p>
+    <script>
+        let users = [{fname : "John", lname : "Doe", age : 41}, //index 0
+        {fname : "Mary", lname : "Jane", age : 43}, //index 1
+        {fname : "Jack", lname : "Martin", age : 45}, // index 2
+        {fname : "Jason", lname : "Smith", age : 47}, // index 3
+    ];    
+    console.log(users[2].lname); //  2 is index value so here lname of index 2 i.e martin will print  
+    console.log(users[1].age);
+    </script> -->
+
+    <p>object array via loop</p>
+    <script>
+          let user = [{fname : "John", lname : "Doe", age : 41}, 
+        {fname : "Mary", lname : "Jane", age : 43}, 
+        {fname : "Jack", lname : "Martin", age : 45}, 
+        {fname : "Jason", lname : "Smith", age : 47}, 
+    ];  
+    // for(let i = 0; i <= 3; i++){
+    //     console.log(user[i].fname + " " + user[i].lname + " " + user[i].age);
+    // }
+    let str = "";
+        for (let x of user){
+            console.log(x.fname +" "+ x.lname +" "+ x.age);
+            str += "<li>"+x.fname+" "+x.lname+" "+x.age+"</li>";
+        } // i here is 1 complete index..
+        document.getElementById("mydt").innerHTML = str;
+    </script>
+</body>
+</html>

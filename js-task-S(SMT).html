@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <p>1.</p>
+    <input type="text" id="demo">
+    <button onclick="myfunc()">Find</button>
+    <p id="demo1"></p>
+    <script>
+        function myfunc() {
+            let text = document.getElementById('demo').value;
+            let text1 = text.substring(0, 4);
+            document.getElementById('demo1').innerHTML = "substring is " + text1;
+        }
+    </script> -->
+
+    <br>
+    <p>2.</p>
+    <label for="">Enter name with comma separated list</label>
+    <input type="text" id="demo2">
+    <button onclick="myfunc1()">find</button>
+    <p id="demo3"></p>
+    <script>
+        function myfunc1() {
+            let txt = document.getElementById('demo2').value;
+
+            let txt1 = txt.split(",");
+            str = "";
+            
+            for(let x of txt1){
+                console.log(x);
+                str += "<ul><li>"+x+"</li></ul>";
+            }
+            document.getElementById('demo3').innerHTML = str;
+        }
+    </script>
+
+    <br>
+    <!-- <p>3.</p>
+    <input type="text" id="demo4">
+    <button onclick="myfunc2()">Replace</button>
+    <p id="demo5"></p>
+    <script>
+       function myfunc2() {
+        let text2 = document.getElementById('demo4').value;
+       let text3 = text2.replace(/john/ig,"mary");
+        document.getElementById('demo5').innerHTML = "replace " +text3;
+       }
+    </script> -->
+    <br>
+    <!-- <p>4.</p>
+    <p>Enter a string below</p>
+    <input type="text" id="string">
+    <br>
+    <p>Enter text to search below</p>
+    <input type="text" id="string1">
+    <button onclick="myfunction()">Find</button>
+    <p id="result"></p>
+    <script>
+        function myfunction() {
+            let text5 = document.getElementById('string').value;
+            let text6 = document.getElementById('string1').value;
+            let txt7 = text5.indexOf(text6);
+            document.getElementById('result').innerHTML = "string found at position " + txt7;
+        }
+    </script> -->
+
+</body>
+
+</html>

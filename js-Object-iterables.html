@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function myfun() {
+            let x = 3;
+            return {
+                next : function() {
+                    x += 2;
+                    return {
+                        value : x, done : true
+                    }
+                }
+            }
+        }
+
+        let data = myfun();
+        data.next();
+        data.next();
+        console.log(data.next().value);
+        console.log(data.next().value);
+    </script>
+
+    <script>
+        let myfunc = {};
+        myfunc[Symbol.iterator] = function() {
+            let x = 3, done1 = false;
+            return {
+                next : function() {
+                    x += 2;
+                    if(x >= 20) {
+                        done1 = true
+                    }
+                    return {
+                        value : x, done : done1
+                    }
+                }
+            }
+        }
+        for(let y of myfunc) {
+            console.log(y);
+        }
+    </script>
+</body>
+</html>

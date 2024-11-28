@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" id="text1" />
+    <input type="text" id="text2" />
+    <button onclick="myfunc()">click me</button>
+
+    <p id="demo"></p>
+    <script>
+      function myfunc() {
+        let text1 = document.getElementById("text1").value;
+        let text2 = document.getElementById("text2").value;
+        let data = {
+          name: text1,
+          job: text2,
+        };
+        fetch("https://reqres.in/api/users", {
+          method: "POST", // or 'PUT'
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(data),
+        })
+          .then((response) => response.json())
+          .then((data) => {
+            console.log("Success:", data);
+            document.getElementById('demo').innerHTML = JSON.stringify(data);
+          });
+      }
+    </script>
+  </body>
+</html>

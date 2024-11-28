@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <a href=""></a>
+        <tr>
+            <td>page</td>
+            <td>per_page</td>
+            <td>total</td>
+            <td>total_pages</td>
+            <td>data</td>
+            <td>support</td>
+        </tr>
+        <tbody id="demo"></tbody>
+    </table>
+
+    <script>
+        let arpit = [1,2.2,6]
+        fetch("https://reqres.in/api/unknown")
+        .then((data1) => data1.json())
+        .then(result => {
+            console.log('result is ', result);
+            let str = "";
+            let x = result.data;
+            for(x of result.data) {
+            str += `<tr><td>${result.page}</td><td>${result.per_page}</td><td>${result.total}</td><td>${result.total_pages}</td><td>
+            ${x.id}${", "}${x.name}${", "}${x.year}${", "}${x.color}${x.pantone_value}</td>
+            <td><a href="${result.support.url}">URL</a></td><td>${result.support.text}</td></tr>
+            `
+            }
+
+
+
+            document.getElementById('demo').innerHTML = str;
+        })
+    </script>
+</body>
+</html>

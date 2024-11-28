@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>arrays task</p>
+    <br>
+    <p>2.</p>
+    <p>enter new element</p>
+    <input type="text" id="fruit">
+    <p>enter location</p>
+    <input type="text" id="fruit1"><button onclick="myfunc()">Add</button>
+    <p id="result"></p>
+    <script>
+        const fruits = ["lemon","apple","mango","kiwi"];
+        function myfunc(){
+            let x = document.getElementById('fruit1').value;
+            let y = document.getElementById('fruit').value;
+            fruits.splice(x,0,y);
+            document.getElementById('result').innerHTML = fruits;
+        }
+    </script>
+    <br><br><br>
+    <p>1.</p>
+    <p>enter name</p>
+    <input type="text" id="userinp"><button onclick="myfunc1()">Add</button>
+    <p id="result1"></p>
+    <script>
+        const myarr = [];
+        function myfunc1(){
+            let inp = document.getElementById('userinp').value;
+            myarr.push(inp);
+            let str = "";
+            for(let x of myarr){
+                str += "<ul><li>"+x+"</li></ul>";
+            }
+            document.getElementById('result1').innerHTML = str;
+        }
+    </script>
+
+    <p>js math array task</p>
+    <p>1. Enter your name</p>
+    <input type="text" id="name"><button onclick="func()">Generate UID</button>
+    <p id="result2"></p>
+    <script>
+      function func(){
+        let uname = document.getElementById('name').value;
+        let y = uname.substring(0,4);
+        let z = Math.floor(Math.random() * (999999 - 99999 + 1) ) + 99999;
+        document.getElementById('result2').innerHTML = y + "@" + z;
+      }
+    </script>
+    <br>
+    <p>2. </p>
+    <p id="newarray"></p>
+    <button onclick="ascend()">Ascending</button>
+    <button onclick="descend()">Descending</button>
+    <button onclick="shuffle()">shuffle</button>
+    <br>
+    <p> array1 = ["lemon","apple","orange","kiwi","mango"]</p>
+    <script>
+         const array1 = ["lemon","apple","orange","kiwi","mango"];
+
+        function ascend(){
+            array1.sort();
+            document.getElementById('newarray').innerHTML = array1;
+        }
+        function descend(){
+            array1.sort();
+            array1.reverse();
+            document.getElementById('newarray').innerHTML = array1;
+        }
+        function shuffle(){
+          let  myarr = array1.sort(function(){return 0.5 - Math.random()});
+            document.getElementById('newarray').innerHTML = myarr;
+        }
+    </script>
+
+</body>
+</html>

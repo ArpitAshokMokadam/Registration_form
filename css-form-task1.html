@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+       }
+       body {
+        width: 100%;
+        height: 100vh;
+        background: linear-gradient(to right, skyblue,purple);
+       }
+        .container {
+            border: 1px solid grey;
+            border-radius: 4px;
+            background-color: honeydew;
+            padding: 15px;
+            position: relative;
+          width: 500px; 
+         top: 50%;
+         left: 50%;
+         transform: translate(-50%,-50%);
+        }
+        .col-40 {
+            float: left;
+            width: 40%;
+
+        }
+        .col-40 {
+            float: left;
+            width: 60%;
+        }
+        input[type=submit] {
+            width: 100%;
+           background: linear-gradient(to right, skyblue,purple);
+            color: #fff;
+            margin-top: 10px;
+            padding: 8px 15px;
+            border: none;
+            border-radius: 5px;
+            font-weight: 600;
+        }
+        .row {
+            margin-bottom: 10px;
+        }
+        .margin {
+            margin-top: 10px;
+        }
+        #gap{
+            margin-right: 70px;
+        
+        }
+        input {
+            padding: 7px 7px;
+            margin-bottom: 10px;
+            border: solid 1px #ddd ;
+            border-radius: 4px;
+         }
+         label {
+            margin-bottom: 25px;
+         }
+         h3::before {
+            content: "";
+            position: absolute;
+            height: 2px;
+            width: 20px;
+            top: 35px;
+            background: linear-gradient(to right, skyblue,purple);
+         }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form action="#">
+            <div class="row">
+                <h3>Registration</h3>
+            </div>
+            <div class="row">
+                <div class="col-40"><h4><label for="fname" >Full name</label></h4></div>
+                <div class="col-40"><input type="text" id="fname" name="fullname" placeholder="enter your name"></div>
+            </div>
+            <div class="row">
+                <div class="col-60"><h4><label for="uname" >Username</label></h4></div>
+                <div class="col-60"><input type="text" id="uname" name="username" placeholder="enter your username"></div>
+            </div>
+            <div class="row">
+                <div class="col-40"><h4><label for="email" >Email</label></h4></div>
+                <div class="col-40"><input type="email" id="email" name="email" placeholder="enter your email"></div>
+            </div>
+            <div class="row">
+                <div class="col-60"><h4><label for="phone">Phone</label></h4></div>
+                <div class="col-60"><input type="number" id="phone" name="phone"  placeholder="enter your ph. no."></div>
+            </div>
+            <div class="row">
+                <div class="col-40"><h4><label for="paswrd" >Password</label></h4></div>
+                <div class="col-40"><input type="password" id="paswrd" name="password" placeholder="enter your password"></div>
+            </div>
+            <div class="row">
+                <div class="col-60"><h4><label for="cpaswrd">Confirm Password</label></h4></div>
+                <div class="col-60"><input type="password" id="cpaswrd" name="cpassword" placeholder="enter confirm password"></div>
+            </div>
+            <div class="row">
+                <div><h4><label for="gender">Gender</label></h4></div>
+                <div class="margin">
+                    <input type="radio" id="male" name="gender">
+                    <label id="gap" for="male">Male</label>
+                    <input type="radio" id="female" name="gender">
+                    <label id="gap" for="female">female</label>
+                    <input type="radio" id="others" name="gender">
+                    <label id="gap" for="others">Prefer not to say</label>
+                </div>
+                <div class="row">
+                    <input type="submit" value="Register">
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       // console.log(x);
+       // console.log("this is console log");
+
+        try{
+            x = 10;
+            console.log(x);   
+        }catch(ex){
+            console.log("some error");  
+            console.log(ex); // error info given to (ex), so prints in ex i.e x is undefined.
+        }finally{
+            console.log("this is final block");
+        }
+        console.log("this is console log");
+    </script>
+
+    <br><br>
+
+    <script>
+        let a = 5, b = 0, z;
+        try {
+            if(b == 0){
+                throw "0 is invalid";
+            }
+            z = a / b;
+            console.log("division is " +z);
+        } catch (ex) {
+            console.log("some error occurred");
+            console.log(ex);
+        }
+    </script>
+</body>
+</html>

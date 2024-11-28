@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Demo {
+            show(){
+                console.log("show Demo");
+            }
+        }
+        let d1 = new Demo();
+        let d2 = new Demo();
+
+        d1.show();
+        d2.show();
+    </script>
+
+    <script>
+        class Demo1 {
+            getdt(x,y){
+                this.x = x;
+                this.y = y;
+            }
+            showdt() {
+                console.log("x = " + this.x);
+                console.log("y = "+ this.y);
+            }
+        }
+        let s1 = new Demo1();
+        let s2 = new Demo1();
+        s1.getdt(1,2);
+        s2.getdt(3,4);
+        s1.showdt();
+        s2.showdt();
+    </script>
+
+    <script>
+        class Calculator {
+            getdt1(x,y){
+                this.x = x;
+                this.y = y;
+            }
+            add() {
+            console.log(this.x + this.y);
+            }
+            sub() {
+                console.log(this.x - this.y);
+            }
+            multi() {
+                console.log(this.x * this.y);
+            }
+            divide() {
+                console.log(this.x / this.y);
+            }
+        }
+        let p1 = new Calculator();
+        p1.getdt1(4,3);
+        p1.add();
+        p1.sub();
+        p1.multi();
+        p1.divide();
+    </script>
+
+
+<br>
+
+<p>Constructor</p>
+<p>1. Simple</p>
+        <script>
+            class Emp {
+                constructor(){
+                    console.log("emp constructor");
+                }
+            }
+            let c1 = new Emp();
+            let c2 = new Emp();
+            
+        </script>
+
+<p>2. Parameterized</p>
+<script>
+    class Emp1 {
+        constructor(x) {
+            console.log("emp constructor " +x);
+        }
+    }
+            let a1 = new Emp1(2);
+            let a2 = new Emp1(3);
+</script>
+
+<script>
+    class Emp2 {
+        constructor(a,b) {
+            this.x = a;
+            this.y = b;
+            console.log(("x = "+ a + " y = " + b));
+        }
+
+       //  show() {
+        //    console.log("x = " + this.x);
+        //    console.log("y = " + this.y);
+         }
+    let e1 = new Emp2 (4,5);
+    let e2 = new Emp2 (6,7);
+  //  e1.show();
+   //  e2.show();
+</script>
+</body>
+</html>

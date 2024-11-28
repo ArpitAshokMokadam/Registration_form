@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="mydata"></ul>
+    <script>
+          let user = [{fname : "John", lname : "Doe", age : 41}, 
+        {fname : "Mary", lname : "Jane", age : 43}, 
+        {fname : "Jack", lname : "Martin", age : 45}, 
+        {fname : "Jason", lname : "Smith", age : 47}, 
+    ];  
+    let str = "";
+    for(let x of user){
+        console.log(x.fname +" "+ x.lname +" "+ x.age);
+        str += "<li>"+x.lname+"</li>";
+    } 
+    document.getElementById("mydata").innerHTML = str;
+    </script>
+</body>
+</html>

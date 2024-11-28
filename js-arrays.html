@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <script>
+        let fruits = ["Apple","Mango","Banana","Kiwi"], i;
+        // console.log(fruits[2]);
+        // console.log(fruits[3]);
+        for(i = 0; i <= 3; i++){
+            console.log(fruits[i]);
+        }
+    </script> -->
+
+    <!-- <script>
+        let points = [3,9,2,4,10,13], i, sum = 0;
+        for(i = 0; i <= 5; i++){
+            sum = sum + points[i]; 
+        }
+        console.log(sum);
+    </script> -->
+
+    <p>forEach iterator</p>
+    <!-- <script>
+        let points = [2,4,6,8,0,3,5,7];
+        points.forEach(myfunc);
+        function myfunc(value,index,array){
+            console.log(value);
+            console.log(index);
+            console.log(array);
+        }
+    </script> -->
+    <p>annonymous/callback function == shortcut of forEach iterator</p>
+    <!-- <script>
+        let points = [2,4,3,5,6,4,7];
+        points.forEach(function(value,index,array){
+            console.log(value);
+            console.log(index);
+            console.log(array);
+        })
+    </script> -->
+
+    <p>for in loop</p> 
+     <script>
+         // x is a variable.. could be anything...
+        var person = {
+            fname : "John", lname : "Doe", age : 19
+        };
+        var fruits = ["apple", "mango", "kiwi", "banana"];
+        for(let x in person){
+            console.log(x);
+            console.log(person[x]);
+        }
+        // for(let x in fruits){
+        //     console.log(x);
+        //     console.log(fruits[x]);
+        // }
+    </script> 
+
+    <p>for of loop</p>
+         <!-- <script>
+        // x is a variable.. could be anything...
+        var person = {
+            fname : "John", lname : "Doe", age : 19
+        };
+        var fruits = ["apple", "mango", "kiwi", "banana"];
+        // for(let x of person){
+        //     console.log(x);
+        //     console.log(person[x]);
+        // }
+        for(let x of fruits){
+            console.log(x);
+            // console.log(fruits[x]);
+        } -->
+    </script>
+    
+</body>
+</html>

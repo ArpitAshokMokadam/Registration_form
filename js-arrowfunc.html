@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // function show() {
+        //     console.log("this is show");
+        // }
+        // show();
+
+        show = () => console.log("this is show");
+        show();
+    </script>
+
+    <script>
+        // function show1(){
+        //     return "hello";
+        // }
+        // console.log(show1());
+
+        show1 = () => "hello world";
+        console.log(show1());
+    </script>
+
+    <p id="demo"></p>
+    <script>
+        let myfunc = (a,b) => a * b;
+        document.getElementById('demo').innerHTML = myfunc(4,6);
+    </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="date" id="dt">
+    <button onclick="btn()">find</button>
+    <p id="show"></p>
+    <script>
+        function btn(){
+        let a = new Date(document.getElementById('dt').value);
+        let b = a.getFullYear();
+        let c = new Date();
+        let d = c.getFullYear();
+        let sub = d - b ;
+        document.getElementById('show').innerHTML =  "this is your age "+ sub;
+        }
+    </script>
+</body>
+</html>

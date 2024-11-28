@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        textarea {
+            margin-left: 13px;
+        }
+       
+        .row {
+            margin: 10px;
+            padding: 3px;
+        }
+        input[type=button] {
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+
+   <div class="container">
+    <textarea name="" id="result" cols="11" rows="3"></textarea>
+    <div class="row">
+        <input type="button" value="1" onclick="loaddt(this.value)">
+        <input type="button" value="2" onclick="loaddt(this.value)">
+        <input type="button" value="3" onclick="loaddt(this.value)">
+        <input type="button" value="+" onclick="loaddt(this.value)">
+    </div>
+    <div  class="row">
+        <input type="button" value="4" onclick="loaddt(this.value)">
+        <input type="button" value="5" onclick="loaddt(this.value)">
+        <input type="button" value="6" onclick="loaddt(this.value)">
+        <input type="button" value="-" onclick="loaddt(this.value)">
+    </div>
+    <div  class="row">
+        <input type="button" value="7" onclick="loaddt(this.value)">
+        <input type="button" value="8" onclick="loaddt(this.value)">
+        <input type="button" value="9" onclick="loaddt(this.value)">
+        <input type="button" value="*" onclick="loaddt(this.value)">
+    </div>
+    <div  class="row">
+        <input type="button" value="C" onclick="cleardt()">
+        <input type="button" value="0" onclick="loaddt(this.value)">
+        <input type="button" value="=" onclick="calculate()">
+        <input type="button" value="/" onclick="loaddt(this.value)">
+    </div>
+   </div> 
+   <script>
+    var str="";
+    function loaddt(x) {
+        str = str + x
+        document.getElementById('result').innerHTML = str;
+    }
+    function calculate() {
+        document.getElementById('result').innerHTML = eval(str);
+        str = "";
+    }
+    function cleardt() {
+        document.getElementById('result').innerHTML = "";
+        str = "";
+    }
+   </script>
+</body>
+</html>

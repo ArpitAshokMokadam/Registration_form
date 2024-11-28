@@ -1,0 +1,164 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <head>
+        <meta charset="UTF-8">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"></script>
+        <title>Document</title>
+    </head>
+    <div class="container">
+        <div class="row">
+
+            <div class="col-md-4">
+
+                <form>
+                    <div class="mb-3">
+                        <label for="inpchknm" class="form-label">Full Name</label>
+                        <input type="text" onkeyup="checkname()" onblur="checkname()" id="inpchknm" class="form-control"
+                            aria-describedby="namelHelp">
+                        <span>Enter Full name with no numbers or special char</span>
+                        <div id="nameerr" class="form-text"></div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="inpchkmail" class="form-label">Email address</label>
+                        <input type="text" onkeyup="checkemail()" onblur="checkemail()" id="inpchkmail"
+                            class="form-control" aria-describedby="emailHelp">
+                        <span>Email Should contain @</span>
+                        <div id="emailerr" class="form-text"></div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="inpchkpassword" class="form-label">Password</label>
+                        <input type="password" onkeyup="checkpassword()" onblur="checkpassword()" class="form-control"
+                            id="inpchkpassword">
+                        <div id="ckpassword" class="form-text"></div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="inpchkmobil" class="form-label">Mobile no</label>
+                        <input type="text" onblur="checkmob()" id="inpchkmobil" class="form-control"
+                            aria-describedby="emailHelp">
+                        <div id="mobilerr" class="form-text">ten digit indian mobile number</div>
+                    </div>
+
+
+
+                    <div class="mb-3">
+                        <label for="state">Select State</label>
+                        <select name="" id="state"></select>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="Cities">Select Cities</label>
+                        <select name="" id="city"></select>
+                    </div>
+
+                    <div class="mb-3">
+                        <button onclick="fun1()">SUBMIT</button>
+                    </div>
+
+                    <p id="demo"></p>
+
+
+
+
+                </form>
+                <script>
+
+                    function checkname() {
+                        let fullname = document.getElementById("inpchknm").value;
+                        let nmpatt = /^[a-zA-Z\. ]+$/;
+                        if (nmpatt.test(fullname)) {
+                            document.getElementById("nameerr").innerHTML = "Name is valid";
+
+                        } else {
+                            document.getElementById("nameerr").innerHTML = "Invalid NAME";
+
+                        }
+                    }
+
+                    function checkemail() {
+                        let emailid = document.getElementById("inpchkmail").value;
+                        let emlpatt = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
+                        if (emlpatt.test(emailid)) {
+                            document.getElementById("emailerr").innerHTML = "VALID EMAIL ID";
+
+                        } else {
+                            document.getElementById("emailerr").innerHTML = "INVALID EMAIL ID";
+
+                        }
+                    }
+
+                    function checkpassword() {
+                        let password = document.getElementById("inpchkpassword").value;
+                        let passwordpatt = /^(?=.\d)(?=.[!@#$%^&])(?=.[a-z])(?=.*[A-Z]).{8,}$/;
+                        if (passwordpatt.test(password)) {
+                            document.getElementById("ckpassword").innerHTML = "VALID PASSWORD";
+
+                        } else {
+                            document.getElementById("ckpassword").innerHTML = "INVALID PASSWORD COMBINATION";
+
+                        }
+                    }
+
+                    function checkmob() {
+                        let mobileno = document.getElementById("inpchkmobil").value;
+                        let mobpatt = /^(?:(?:\+|0{0,2})91(\s*|[\-])?|[0]?)?([6789]\d{2}([ -]?)\d{3}([ -]?)\d{4})$/;
+                        if (mobpatt.test(mobileno)) {
+                            document.getElementById("mobilerr").innerHTML = "VALID Mobile Number";
+
+                        } else {
+                            document.getElementById("mobilerr").innerHTML = "INVALID Mobile Number";
+
+                        }
+                    }
+
+
+                    let statesname = ["select", "Andhra Pradesh", "Arunachal Pradesh", "Assam", "Bihar",
+                        "Chhattisgarh", "Goa", " Gujarat", "Haryana", "Himachal Pradesh",
+                        "Jharkhand", "Karnataka", "Kerala", "Madhya Pradesh", "Maharashtra",
+                        "Manipur", "Meghalaya", "Mizoram", "Nagaland", "Odisha (Orissa)", "Punjab",
+                        "Rajasthan", "Sikkim", "West Bengal", "Tamil Nadu", "Telangana"];
+
+                    let txt = "";
+                    for (let x of statesname) {
+                        txt += `<option>${x}</option>`;
+                    }
+                    document.getElementById("state").innerHTML = txt;
+
+                    let citiesname = ["Delhi NCR", "Mumbai", "Bangalore", "Pune",
+                        "Hyderabad", "Chennai", "Kolkata", "Ahmedabad"];
+                    let st = "";
+                    for (let z of citiesname) {
+                        st += `<option>${z}</option>`;
+                    }
+                    document.getElementById("city").innerHTML = st;
+
+                    function fun1() {
+
+                        document.getElementById("demo").innerHTML = "Details Submitted";
+
+                    }
+
+
+
+
+
+
+                </script>
+</body>
+
+</html>

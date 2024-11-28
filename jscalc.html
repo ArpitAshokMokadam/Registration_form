@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            position: absolute;
+            width: 270px;
+            border: 1px solid grey;
+            padding: 10px;
+            border-radius: 5px;
+            background-color: darkgrey;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+        textarea {
+            margin-bottom: 10px;
+            margin-left: 6px;
+            margin-top: 10px;
+            resize: none;
+            width: 250px;
+            height: 40px;
+            border-radius: 5px;
+        }
+        .row {
+            width: 100%;
+            margin-left: 6px;
+        }
+        input[type=text] {
+            text-align: center;
+            width: 30px;
+            padding: 10px;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        input[type=text]:hover {
+            background-color: grey;
+            color: white;
+        } 
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div><textarea name="" id="results" cols="30" rows="10"></textarea></div>
+        <div class="row">
+            <input type="text" value="1" onclick="func(this.value)">
+            <input type="text" value="2" onclick="func(this.value)">
+            <input type="text" value="3" onclick="func(this.value)">
+            <input type="text" value="+" onclick="func(this.value)">
+        </div>
+        <div class="row">
+            <input type="text" value="4" onclick="func(this.value)">
+            <input type="text" value="5" onclick="func(this.value)">
+            <input type="text" value="6" onclick="func(this.value)">
+            <input type="text" value="-" onclick="func(this.value)">
+        </div>
+        <div class="row">
+            <input type="text" value="7" onclick="func(this.value)">
+            <input type="text" value="8" onclick="func(this.value)">
+            <input type="text" value="9" onclick="func(this.value)">
+            <input type="text" value="*" onclick="func(this.value)">
+        </div>
+        <div class="row">
+            <input type="text" value="C" onclick="cleardt()">
+            <input type="text" value="0" onclick="func(this.value)">
+            <input type="text" value="=" onclick="calc()">
+            <input type="text" value="/" onclick="func(this.value)">
+        </div>
+    </div>
+    <script>
+        var str = "";
+        function func(x) {
+            str = str + x;
+            document.getElementById('results').innerHTML = str;
+        }
+        function calc() {
+            document.getElementById('results').innerHTML = eval(str);
+            str = "";
+        }
+        function cleardt() {
+            document.getElementById('results').innerHTML = "";
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>1st loop</p>
+    <!-- <script>
+        let x = 1;
+        while(x <= 10){
+            console.log(x);
+            x++;
+        }
+    </script> -->
+    <!-- <script>
+        let x = 1;
+        do{
+            console.log(x);
+            x++;
+        }while(x <= 10);
+    </script> -->
+    <!-- <script>
+        for(let x = 1; x <= 10; x++) {
+            console.log(x);
+        }
+    </script> -->
+
+    <p>3rd loop</p>
+    <!-- <script>
+        let x = 65;
+        while(x <= 90){
+            console.log(String.fromCharCode(x));
+            x++;
+        }
+    </script> -->
+    <!-- <script>
+        let x = 65;
+        do{
+            console.log(String.fromCharCode(x));
+            x++;
+        }while(x <= 90);
+    </script> -->
+    <!-- <script>
+        for(x = 65; x <= 90; x++){
+            console.log(String.fromCharCode(x));
+        }
+    </script> -->
+
+    <p>4th loop</p>
+    <!-- <script>
+        let x = 1;
+        while(x <= 100){
+            if(x % 2 == 0){
+                console.log(x);
+            }
+            x++;
+        }
+    </script> -->
+    <!-- <script>
+        let x = 1;
+        do{
+            if(x % 2 == 0){
+                console.log(x);
+            }
+            x++;
+        }while(x <= 100);
+    </script> -->
+    <!-- <script>
+        for(x = 1; x <= 100; x++){
+            if(x % 2 == 0){
+                console.log(x);
+            }
+        }
+    </script> -->
+    <p>6th loop</p>
+    <!-- <script>
+        let x = 1, sum = 0;
+        while(x <= 10){
+            sum = sum + x;
+            x++;
+        }
+        console.log(sum);
+    </script> -->
+    <!-- <script>
+        let x = 1, sum = 0;
+        do{
+            sum = sum + x;
+            x++;
+        }while(x <= 10);
+        console.log(sum);
+    </script> -->
+    <!-- <script>
+        let sum = 0;
+        for(x = 1; x <= 10; x++){
+            sum = sum + x;
+        }
+        console.log(sum);
+    </script> -->
+
+    <p>7th loop</p>
+    <!-- <script>
+        let x = 1, sum = 0;
+        while(x <= 10){
+            if(x % 2 == 0){
+                sum = sum + x;
+            }
+            x++;
+        }
+        console.log(sum);
+    </script> -->
+    <!-- <script>
+        let x = 1, sum = 0;
+        do{
+            if(x % 2 == 0){
+                sum = sum + x;
+            }
+            x++;
+        }while(x <= 10);
+        console.log(sum);
+    </script> -->
+    <!-- <script>
+        let sum = 0;
+        for(x = 1; x <= 10; x++){
+            if(x % 2 == 0){
+                sum = sum + x;
+            }
+        }console.log(sum);
+    </script> -->
+
+    <p>9th loop</p>
+    <!-- <script>
+        let x = 3, i = 1;
+        while(i <= 10){
+            console.log(x + "*" + i + "=" +(x * i));
+            i++;
+        } 
+    </script> -->
+
+    <!-- <script>
+        let x = 4, i = 1;
+        do{
+            console.log(x + "*" + i + "=" +(x * i));
+            i++;
+        } while(i <= 20)
+    </script> -->
+
+    <!-- <script>
+        let x = 6, i = 1;
+        for( ; i <= 10; i++){
+            console.log(x + "*" + i + "=" +(x * i));
+        }
+    </script> -->
+
+    <p>10th loop</p>
+    <!-- <script>
+        let num = 12345, count = 0;
+        while(num != 0){
+            count++;
+            num = parseInt(num/10);
+        }
+        console.log(count);
+    </script> -->
+
+    <!-- <script>
+        let num = 12345, count = 0;
+        do{
+            count++;
+            num = parseInt(num/10);
+        }while(num != 0);
+        console.log(count);
+    </script> -->
+
+    <!-- <script>
+        let num = 1234, count = 0;
+        for( ; num != 0; count++){
+            num = parseInt(num/10);
+        }
+        console.log(count);
+    </script> -->
+
+    <p>11th loop</p>
+    <!-- <script>
+        let fd = 0, ld = 0, num = 1234;
+        ld = num % 10;
+        while(num != 0) {
+            fd = num % 10;
+            num = parseInt(num/10);
+        }
+        console.log(fd); console.log(ld);
+    </script>  -->
+
+    <!-- <script>
+        let fd = 0, ld = 0, num = 2436;
+        ld = num % 10;
+        do{
+            fd = num % 10;
+            num = parseInt(num/10);
+        }while(num != 0);
+        console.log(fd); console.log(ld);
+    </script> -->
+
+    <!-- <script>
+        let fd = 0, ld = 0, num = 3457;
+        ld = num % 10;
+        for( ; num != 0; ){
+            fd = num % 10;
+            num = parseInt(num/10);
+        }
+        console.log(fd); console.log(ld);
+    </script> -->
+
+    <p>12th loop</p>
+    <!-- <script>
+        let fd = 0, ld = 0, num = 2345, sum = 0;
+        ld = num % 10;
+        while(num != 0){
+            fd = num % 10;
+            num = parseInt(num/10);
+        }
+        console.log(sum = fd + ld);
+    </script> -->
+
+    <!-- <script>
+        let fd = 0, ld = 0, sum = 0, num = 3459;
+        ld = num % 10;
+        do{
+            fd = num % 10;
+            num = parseInt(num/10);
+        }while(num != 0)
+        console.log(sum = fd + ld);
+    </script> -->
+
+    <!-- <script>
+        let fd = 0, ld = 0, sum = 0, num = 3498;
+        ld = num % 10;
+        for( ; num != 0; ){
+            fd = num % 10;
+            num = parseInt(num/10);
+        }
+        console.log(sum = fd + ld);
+    </script> -->
+
+    <p>13th loop</p>
+    <script>
+
+    </script>
+
+    <p>14th loop</p>
+    <!-- <script>
+        let num = 3456, sum = 0;
+        while(num != 0){
+            sum = sum + (num % 10);
+            num = parseInt(num/10);
+        }
+        console.log(sum);
+    </script> -->
+
+    <!-- <script>
+        let num = 2345, sum = 0;
+        do{
+            sum = sum + (num % 10);
+            num = parseInt(num/10);
+        }while(num != 0);
+        console.log(sum);
+    </script> -->
+
+    <!-- <script>
+        let num = 1234, sum = 0;
+        for ( ; num != 0; ){
+            sum = sum + (num % 10);
+            num = parseInt(num/10);
+        }
+        console.log(sum);
+    </script> -->
+
+    <p>16th loop</p>
+    <!-- <script>
+        let num = 2345, dg = 0, rev = 0;
+        while(num != 0){
+            dg = num % 10;
+            rev = rev * 10 + dg;
+            num = parseInt(num/10);
+        }
+        console.log(rev);
+    </script> -->
+    <!-- <script>
+        let num = 2345, dg = 0, rev = 0;
+        do{
+            dg = num % 10;
+            rev = rev * 10 + dg;
+            num = parseInt(num/10);
+        }while(num != 0);
+        console.log(rev);
+    </script> -->
+    <!-- <script>
+        let num = 2345, dg = 0, rev = 0;
+        for( ; num != 0; ){
+            dg = num % 10;
+            rev = rev * 10 + dg;
+            num = parseInt(num/10);
+        }
+        console.log(rev); -->
+
+    <p>24th loop</p>
+    <!-- <script>
+            let n1 = 20, n2 = 25, i = 2;
+            while(i < n1){
+                if(n1 % i == 0 && n2 % i == 0){
+                    hcf = i;
+                }
+                i++;
+            }
+            console.log(hcf);
+        </script> -->
+    <!-- <script>
+            let n1 = 30, n2 = 40, i = 2;
+            do{
+                if(n1 % i == 0 && n2 % i == 0){
+                    hcf = i;
+                }
+                i++;
+            }while(i < n1);
+            console.log(hcf);
+        </script> -->
+    <!-- <script>
+            let n1 = 21, n2 = 24, i = 2;
+            for ( ; i < n1; ){
+                if(n1 % i == 0 && n2 % i == 0){
+                    hcf = i;
+                }
+                i++;
+            }
+            console.log(hcf);
+        </script> -->
+
+    <p>15th loop</p>
+    <!-- <script>
+            let num = 2234, pr = 1;
+            while(num != 0){
+                pr = pr * (num % 10);
+                num = parseInt(num/10);
+            }
+            console.log(pr);
+        </script> -->
+    <!-- <script>
+            let num = 234, pr = 1;
+            do{
+                pr = pr * (num % 10);
+                num = parseInt(num/10);
+            }while(num != 0);
+            console.log(pr);
+        </script> -->
+    <!-- <script>
+            let num = 453, pr = 1;
+            for( ; num != 0; ){
+                pr = pr * (num % 10);
+                num = parseInt(num/10);
+            }
+            console.log(pr);
+        </script> -->
+
+    <p>17th loop</p>
+    <!-- <script>
+            let num = 121, rev = 0, num1;
+            num1 = num;
+            while(num != 0){
+                dg = num % 10;
+            rev = rev * 10 + dg;
+            num = parseInt(num/10);
+            }
+            if(rev == num1){
+                console.log("palindrome");
+            }else{
+                console.log("not palindrome");
+            }
+        </script>  -->
+
+    <!-- <script>
+           let num = 234, rev = 0, num1; 
+        //    dg = 0; doesn't matter if taken or not taken in let..
+            num1 = num;
+            do{
+                dg = num % 10;
+                rev = rev * 10 + dg;
+                num = parseInt(num/10);
+            }while(num != 0);
+                if(rev == num1){
+                    console.log("palindrome");
+                }else{
+                    console.log("not palindrome");
+                }
+            
+        </script> -->
+    <!-- <script>
+            let num = 232, rev = 0, num1;
+            num1 = num;
+            for( ; num != 0; ){
+                dg = num % 10;
+                rev = rev * 10 + dg;
+                num = parseInt(num/10);
+            }
+            if(rev == num1){
+                console.log("palindrome");
+            }else{
+                console.log("not palindrome");
+            }
+        </script> -->
+
+    <p>18th loop</p>
+    <!-- <script>
+        let num = 22234534, dg;
+        let C0 = 0, C1 = 0, C2 = 0, C3 = 0, C4 = 0, C5 = 0, C6 = 0, C7 = 0, C8 = 0, C9 = 0;
+        while (num != 0) {
+            dg = num % 10;
+
+            switch (dg) {
+                case 0: C0++;
+                    break;
+                case 1: C1++;
+                    break;
+                case 2: C2++;
+                    break;
+                case 3: C3++;
+                    break;
+                case 4: C4++;
+                    break;
+                case 5: C5++;
+                    break;
+                case 6: C6++;
+                    break;
+                case 7: C7++;
+                    break;
+                case 8: C8++;
+                    break;
+                case 9: C9++;
+                    break;
+            }
+            num = parseInt(num / 10);
+        }
+        console.log("0 occurred " + C0 + " times ");
+        console.log("1 occurred " + C1 + " times ");
+        console.log("2 occurred " + C2 + " times ");
+        console.log("3 occurred " + C3 + " times ");
+        console.log("4 occurred " + C4 + " times ");
+        console.log("5 occurred " + C5 + " times ");
+        console.log("6 occurred " + C6 + " times ");
+        console.log("7 occurred " + C7 + " times ");
+        console.log("8 occurred " + C8 + " times ");
+        console.log("9 occurred " + C9 + " times ");
+    </script> -->
+
+    <p>19th loop</p>
+    <!-- <script>
+
+       </script> -->
+
+    <p>20th loop</p>
+    <!-- <script>
+        let x = 1;
+        while(x <= 128){
+            console.log(x+" "+String.fromCharCode(x));
+            x++;
+        }
+      </script> -->
+    <!-- <script>
+        let  x = 1;
+        do{
+            console.log(x+" "+String.fromCharCode(x));
+            x++;
+        }while(x <= 128);
+      </script> -->
+    <!-- <script>
+        for(x = 1; x <= 128; x++){
+            console.log(x+" "+String.fromCharCode(x));
+        }
+      </script> -->
+
+    <p>21st loop</p>
+    <!-- <script>
+           let i = 1; base = 2, expo = 5, power = 1;
+           for( ; i <= expo; i++){
+                power = power * base;
+           }
+           console.log(power);
+      </script> -->
+    <!-- <script>
+        let i = 1, base = 3, expo = 4, power = 1;
+        while(i <= expo){
+            power = power * base;
+            i++;
+        }
+        console.log(power);
+      </script> -->
+    <!-- <script>
+        let i = 1, base = 4, expo = 4, power = 1;
+        do{
+            power = power * base;
+            i++;
+        }while(i <= expo);
+        console.log(power);
+      </script> -->
+
+    <p>22nd loop</p>
+    <!-- <script>
+        let x = 20, i = 1;
+        while(i <= 20){
+            if(x % i == 0){
+                console.log(i);
+            }
+            i++;
+        }
+     </script> -->
+
+    <!-- <script>
+        let x = 30, i = 1;
+        do{
+            if(x % i == 0){
+                console.log(i);
+            }
+            i++;
+        }while(i <= 30);
+     </script> -->
+
+    <!-- <script>
+        let x = 20, i = 1;
+        for( ; i <= 20; i++){
+            if(x % i == 0){
+                console.log(i);
+            }
+        }
+     </script> -->
+
+    <p>23rd loop</p>
+    <!-- <script>
+        let num = 5, fact = 1, i = 1;
+        while(i <= num){
+            fact = fact * i;
+            i++;
+        }
+        console.log(fact);
+    </script> -->
+    <!-- <script>
+        let num = 4, fact = 1, i = 1;
+        do{
+            fact = fact * i;
+            i++;
+        }while(i <= num);
+        console.log(fact);
+    </script> -->
+    <!-- <script>
+        let num = 3, fact = 1, i = 1;
+        for( ; i <= num; i++){
+            fact = fact * i;
+        }
+        console.log(fact);
+    </script> -->
+
+    <p>25th loop</p>
+    <!-- <script>
+        let n1 = 12, n2 = 15, i, lcm = 0;
+        i = n2;
+        while(i <= (n1*n2)){
+            if(i % n1 == 0 && i % n2 == 0){
+                lcm = i;
+                break;
+            }
+            i++;
+        }
+        console.log(lcm);
+    </script> -->
+    <!-- <script>
+        let n1 = 10, n2 = 15, i, lcm = 0;
+        i = n2;
+        do{
+            if(i % n1 == 0 && i % n2 == 0){
+                lcm = i;
+                break;
+            }
+            i++;
+        }while(i <= (n1*n2));
+        console.log(lcm);
+    </script> -->
+    <!-- <script>
+        let n1 = 5, n2 = 7, i, lcm = 0;
+        i = n2;
+        for( ; i <= (n1*n2); i++){
+            if(i % n1 == 0 && i % n2 == 0){
+                lcm = i;
+                break;
+            }
+        }
+        console.log(lcm); 
+    </script> -->
+
+    <p>26th loop</p>
+    <!-- <script>
+        let num = 15, i = 2;
+        while (i < num) {
+            if (num % i == 0) {
+                console.log("not a prime number" + num);
+                break;
+            }
+            i++;
+        }
+        if (i == num) {
+            console.log("prime number" + num);
+        }
+    </script> -->
+    <!-- <script>
+        let num = 12, i = 2;
+        do{
+            if(num % i == 0){
+                console.log("not a prime number");
+                break;
+            }
+            i++;
+        }while(i < num);
+        if(i == num){
+            console.log("prime number");
+        }
+    </script> -->
+    <!-- <script>
+        let num = 12, i = 2;
+        for( ; i < num; i++){
+            if(num % i == 0){
+                console.log("not a prime number");
+                break;
+            }  
+        }
+        if(i == num){
+                console.log("prime number");
+            }
+    </script> -->
+    <!-- <h3>Enter Some value</h3>
+    <input type="text" id="num">
+    <button onclick="num ()">CHECK<//button>
+    <script>
+        function num() {
+            let num, i = 2;
+            num = parseInt(document.getElementById('num').value)
+
+            while (i < num) {
+                if (num % i == 0) {
+                    console.log("Not Prime number");
+                    break;
+                }
+                i++;
+            }
+            if (i == num) {
+                console.log(" Prime number");
+            }
+        }
+    </script> -->
+
+    <p>27th loop</p>
+    <!-- <script>
+        let j = 1, i, num;
+        debugger;
+        while (j < 10) {
+            i = 2;
+            // num = j;
+            while (i < j) {
+                if (j % i == 0) {
+                    break;
+                }
+                i++;
+            }
+            if (i == j) {
+                console.log("prime no. = " + i);
+            }
+            j++;
+        }
+    </script> -->
+
+    <p>28th loop</p>
+    <!-- <script>
+       let j = 1, i, num, sum = 0;
+       while(j < 10){
+        i = 2;
+        num = j;
+        while(i < num){
+            if(num % i == 0){
+                break;
+            }
+            i++;
+        }
+        if(i == num){
+            sum = sum + i;
+        }
+        j++;
+       }
+       console.log(sum);
+    </script> -->
+
+    <p>29th loop</p>
+    <!-- <script>
+        let num = 30, i = 2, j = 2, num1;
+        while(i < num){
+            if(num % i == 0){
+                j = 2;
+                num1 = i;
+                while(j < num1){
+                    if(num1 % j == 0){
+                        break;
+                    }
+                    j++;
+                }
+                if(j == num1){
+                    console.log("prime factors are " +i);
+                }
+            }
+            i++;
+        } 
+    </script> -->
+
+    <p>30th loop</p>
+    <!-- <script>
+        let num = 153, num1, sum = 0, ld ;
+        num1 = num;
+        while(num != 0){
+            ld = num % 10;
+            sum = sum + (ld*ld*ld);
+           num = parseInt(num/10);
+        }
+        if(num1 == sum){
+            console.log("armstrong number");
+        }else{
+            console.log("not an armstrong number");
+        }
+    </script> -->
+
+    <p>31st loop</p>
+    <script>
+
+    </script>
+</body>
+
+</html>

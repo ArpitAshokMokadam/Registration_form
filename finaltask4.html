@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>
+      script data taken from
+      <a
+        href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch"
+        >here</a
+      >
+      heading : Uploading JSON data
+    </p>
+
+    <script>
+      const data = {
+        name: "morpheus",
+        job: "leader",
+      };
+      fetch("https://reqres.in/api/users", {
+        method: "POST", // or 'PUT'
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      })
+        .then((response) => response.json())
+        .then((data) => {
+          console.log("Success:", data);
+        });
+    </script>
+
+    <p>method : 'PUT'</p>
+    <script>
+      const dt = {
+        'name': "morpheus",
+        'job': "zion resident",
+      };
+      fetch ("https://reqres.in/api/users/2", {
+        method : "PUT",
+        headers : {
+            "Content-Type" : "application/json"
+        },
+        body : JSON.stringify(dt),
+      })
+      .then((resp) => resp.json())
+      .then(dt1 => {
+        console.log("Success :", dt1);      
+    })
+    </script>
+
+    <p>method : 'DELETE'</p>
+    <input type="text" id="demo">
+    <button onclick="myfunc()">DELETE</button>
+    <p id="demo1"></p>
+    <script>
+       function myfunc() {
+        let x = document.getElementById('demo').value;
+        fetch('https://reqres.in/api/users/'+x, {
+            method : 'DELETE',
+            headers : {
+                'Content-Type' : 'application/json'
+            },
+           
+        })
+        .then((resp1) => resp1.json())
+        .then(respo => {
+            console.log(respo);
+        })
+       }
+    </script>
+  </body>
+</html>

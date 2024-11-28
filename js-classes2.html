@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Staff {
+            constructor(code,name) {
+                console.log("code = "+code + " name = " +name);
+            }
+        }
+        class Teacher extends Staff {
+            constructor(code,name,subject) {
+                super(code,name);
+                console.log("subject = " +subject);
+            }
+        }
+        class Officer extends Staff {
+            constructor(code,name,grade){
+                super(code,name);
+                console.log("grade = " +grade);
+            }
+        }
+        class Typist extends Staff {
+            constructor(code, name,speed) {
+                super(code,name);
+                console.log("speed = " +speed);
+            }
+        }
+        class Regular extends Typist {
+            constructor(code ,name,speed,salary) {
+                super(code,name,speed);
+                console.log("salary = " +salary);
+            }
+        }
+        class Permanant extends Typist {
+            constructor(code,name,speed,payment) {
+                super(code,name,speed);
+                console.log("payment = " +payment);
+            }
+        }
+        console.log("teacher details");
+        let o1 = new Teacher(0101," John "," English ");
+        console.log("Regular details");
+        let o2 = new Regular(0202," Doe ",40,10000);
+        console.log("Permanant details");
+        let o3 = new Permanant(0303," Justin ",50,20000);
+        console.log("Officer details");
+        let o4 = new Officer(0404," Martin "," Grade A ");
+    </script>
+</body>
+</html>

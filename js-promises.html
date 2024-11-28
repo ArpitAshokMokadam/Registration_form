@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        console.log("one");
+        console.log("two");
+        setTimeout(() => console.log("timeoutfunc"), 0);
+        console.log("three");
+        console.log("four");
+        console.log("five");
+    </script>
+
+
+    <p id="demo"></p>
+    <script>
+        function mydisplayer(some) {
+            document.getElementById('demo').innerHTML = some;
+        }
+        function getFile(mycallback) {
+                let req = new XMLHttpRequest();
+                req.onload = function() {
+                    if (req.status == 200) {
+                        mycallback(this.responseText);
+                    } else {
+                        mycallback("Error : " + req.status);
+                    }
+                }
+                req.open('GET', "js.promises1.html");
+                req.send();
+        }
+        getFile(mydisplayer);
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   
+    <table>
+        <tr>
+            <td>data</td>
+            <td>support</td>
+        </tr>
+        <tbody id="demo"></tbody>
+    </table>
+
+    <script>
+        fetch("https://reqres.in/api/unknown/2")
+        .then((data1) => data1.json())
+        .then((result) => {
+            let x = result.data;
+            let y = result.support;
+            let str = "";
+            str += `<tr><td>${x.id}${", "}${x.name}${", "}${x.year}${", "}${x.color}${", "}
+                ${x.pantone_value}</td><td><a href="${y.url}">support-url</a>${", "}${y.text}</td></tr>`
+
+                document.getElementById('demo').innerHTML = str;
+        });
+    </script>
+</body>
+</html>

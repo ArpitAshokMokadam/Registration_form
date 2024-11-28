@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>classes inheritance</p>
+    <p>1. Single</p>
+    <script>
+        class One {
+            show() {
+                console.log("One show");
+            }
+        }
+        class Two extends One{
+            disp() {
+                console.log("Two display");
+            }
+        }
+        let o = new One();
+        let t = new Two();
+        o.show();
+        // o.disp();
+        t.show();
+        t.disp();
+    </script>
+
+    <p>2. Multilevel</p>
+    <script>
+        class One1 {
+            func() {
+                console.log("show 1");
+            }
+        }
+        class Two1 extends One1 {
+            func1(){
+                console.log("show 2");
+            }
+        }
+        class Three extends Two1 {
+            func2(){
+                console.log("show 3");
+            }
+        }
+        let o1 = new One1();
+        let t1 = new Two1();
+        let t2 = new Three();
+        o1.func();
+        t1.func();
+        t1.func1();
+        t2.func2();
+        t2.func1();
+        t2.func();
+    </script>
+
+    <p>3. Multiple</p>
+    <script>
+        class Abc {
+            myfunc(){
+                console.log("multi 1");
+            }
+        }
+        class Abc1 extends Abc {
+            myfunc1() {
+                console.log("multi 2");
+            }
+        }
+        class Abc2 extends Abc {
+            myfunc3() {
+                console.log("multi 3");
+            }
+        }
+        let a1 = new Abc();
+        let a2 = new Abc1();
+        let a3 = new Abc2();
+        a1.myfunc();
+        a2.myfunc1();
+        a2.myfunc();
+        a3.myfunc3();
+        a3.myfunc();
+    </script>
+
+    <p>4. Hierarchial</p>
+    <script>
+        class A1 {
+            a() {
+                console.log("parent");
+            }
+        }
+        class B1 extends A1 {
+            b() {
+                console.log("B is child of A");
+            }
+        }
+        class D1 extends B1 {
+            d() {
+                console.log("D is child of B");
+            }
+        } 
+        class E1 extends B1 {
+            e() {
+                console.log("E is child of B");
+            }
+        }
+        class C1 extends A1 {
+            c() {
+                console.log("C is child of A");
+            }
+        }
+        class F1 extends C1 {
+            f() {
+                console.log("F is child of C")
+            }
+        }
+        class G1 extends C1 {
+            g() {
+                console.log("G is child of C");
+            }
+        }
+        let q = new A1();
+        let q1 = new B1();
+        let q2 = new D1();
+        let q3 = new E1();
+        let q4 = new C1();
+        let q5 = new F1();
+        let q6 = new G1();
+        q.a();
+        q1.a();
+        q1.b();
+        q2.b();
+        q2.d();
+        q2.a();
+        q3.e();
+        q3.b();
+        q3.a();
+        q4.c();
+        q4.a();
+        q5.f();
+        q5.c();
+        q5.a();
+        q6.g();
+        q6.c();
+        q6.a();
+    </script>
+
+    <p>new program</p>
+    <script>
+        class A {
+            constructor() {
+                console.log("one constructor");
+            }
+        }
+        class B extends A {
+            constructor() {
+                super();
+                console.log("B extends A");
+            }
+        }
+        let b = new B();
+    </script>
+
+
+<p>constructor with parameter combine </p>
+    <script>
+        class ClassA {
+            constructor(x) {
+                console.log("class A = "+x);
+            }
+        }
+        class ClassB extends ClassA {
+            constructor(p,q) {
+                super(p);
+                console.log("p = "+p);
+                console.log("q = "+q);
+            }
+        }
+        let b1 = new ClassB(16,12);
+    </script>
+
+
+<p>constructor parameter combine </p>
+    <script>
+        class ClassC {
+            constructor(c){
+                console.log("c = " +c);
+            }
+        }
+        class ClassD extends ClassC {
+            constructor(d,e) {
+                super(e);
+                console.log("d = " +d);
+                console.log("e = " +e);
+            }
+        }
+        class ClassE extends ClassD {
+            constructor(f,g,h) {
+                super(g,h);
+                console.log("f = " +f);
+                console.log("g = " +g);
+                console.log("h = " +h);
+            }
+        }
+        let p = new ClassE(3,2,1);
+    </script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .boundary {
+            height: 250px;
+            width: 180px;
+            border: 1px solid black;
+            text-align: center;
+            padding: 5px;
+            float: left;
+            margin-left: 155px;
+            margin-bottom: 20px;
+        }
+        .image {
+            width: 100%;
+        }
+        .id {
+            padding: 3px;
+        }
+        .email {
+            padding: 3px;
+        }
+       .name {
+        padding: 3px;
+       }
+    </style>
+</head>
+<body>
+    <p id="data1"></p>
+    <script>
+       // const userdata = {};
+            fetch("https://reqres.in/api/users?page=2")
+            .then((dataa) => dataa.json())
+            .then((res) => {
+               // console.log(res.data[0].email);
+              let str = "";
+              for(let x of res.data) {
+                    str += `<div class = "boundary">
+                        <div class = "id">${x.id}</div>
+                        <div class = "email">${x.email}</div>
+                        <div><span class = "name">${x.first_name}${" "}${x.last_name}</span></div>
+                        <img src = "${x.avatar}" class = "image">
+                        </div>`
+              }
+              document.getElementById('data1').innerHTML = str;
+            });
+
+    </script>
+</body>
+</html>
